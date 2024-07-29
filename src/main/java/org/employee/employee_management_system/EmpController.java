@@ -16,18 +16,18 @@ public class EmpController {
 
     //EmployeeService employeeService = new EmployeeServiceImpl();
     //Dependcy Injection
+    // @Autowired
     EmployeeService employeeService;   // EmpController is depending on EmployeeService.ioc contaner will resposiable for creating object.
 
     @GetMapping("employees")
     public List<Employee> getAllEmployees() {
-        return employeeService.readEmployee();
+        return employeeService.readEmployees();
     }
     
     @PostMapping("employees")
     public String createEmployee(@RequestBody Employee employee) {
         //employees.add(employee);
-        employeeService.createEmployee(employee);
-        return "Saved Successfully";
+        return employeeService.createEmployee(employee);
+        //return "Saved Successfully";
     }
-    
 }

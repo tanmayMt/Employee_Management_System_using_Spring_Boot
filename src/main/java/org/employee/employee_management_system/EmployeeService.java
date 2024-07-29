@@ -3,7 +3,7 @@ package org.employee.employee_management_system;
 import java.util.List;
 
 public interface EmployeeService {
-    Employee createEmployee(Employee employee);
-    List<Employee> readEmployee();
+    String createEmployee(Employee employee);
+    List<Employee> readEmployees();
     boolean deleteEmployee(Long id);
 }
