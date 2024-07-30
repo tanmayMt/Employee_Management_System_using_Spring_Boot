@@ -16,10 +16,10 @@ public class EmpController {
 
     //List<Employee> employees = new ArrayList<>();
 
-    //EmployeeService employeeService = new EmployeeServiceImpl();
+    EmployeeService employeeService = new EmployeeServiceImpl();
     //Dependcy Injection
     // @Autowired
-    EmployeeService employeeService;   // EmpController is depending on EmployeeService.ioc contaner will resposiable for creating object.
+    //EmployeeService employeeService;   // EmpController is depending on EmployeeService.ioc contaner will resposiable for creating object.
 
     @GetMapping("employees")
     public List<Employee> getAllEmployees() {
